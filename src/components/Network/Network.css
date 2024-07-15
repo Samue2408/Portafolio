@@ -1,0 +1,30 @@
+.networks {
+    padding-left: 30px;
+    height: 100vh;
+    position: fixed;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .networks a img{
+    height: 30px;
+    margin-block: 24px;
+  }
+  
+  @media (max-width: 600px){
+    .networks {
+      position: relative;
+      padding-left: 0;
+      padding-top: 70px;
+      height: auto;
+      width: 100%;
+      flex-direction: row;
+    }
+
+    .networks a img{
+      height: 20px;
+      margin-inline: 12px;
+      margin-block: 0;
+    } 
+  }

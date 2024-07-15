@@ -1,0 +1,38 @@
+.App {
+  text-align: center;
+  margin: 0;
+}
+
+#skills {
+  display: flex;  
+  align-items: center;
+  flex-direction: column;
+  padding-top: 120px;
+  h1{
+    color: #18D26F;
+    font-size: 35px;
+  }
+
+}
+
+.languages-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-inline: 50px;
+}
+
+
+.language_skill {
+  height: 180px;
+  margin: 50px 70px;
+  text-align: center;
+  img {
+    height: 100%;
+  };
+  h3{
+    font-size: 20;
+    font-weight: 300;
+  }
+  
+}

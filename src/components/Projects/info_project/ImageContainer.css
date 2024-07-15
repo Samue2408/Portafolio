@@ -1,0 +1,119 @@
+.image-container {
+    position: relative;
+    height: 350px;    
+    margin: 50px auto; /* Centra el contenedor */
+    overflow: hidden; /* Recorta lo que se salga del contenedor */
+    background-color: #485550;
+    display: flex;
+    flex-direction: column-reverse;    
+    align-items: center;    
+    justify-content: space-between;
+    border-radius: 8px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 85%;
+    /*object-fit: cover;*/
+}
+
+.image-container h2 {   
+    font-size: 20px;
+    padding-block: 12px;
+    color: #18D26F;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /*background: #485550ef;  Fondo semitransparente */
+    background: #ffffffef; /* Fondo semitransparente */
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .9s ease ; /* Transición suave */    
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.overlay p{
+    padding: 15px;
+    margin: 0;
+}
+
+.overlay a{    
+    border: solid 2px #18D26F;
+    /*background-color: #485550;*/
+    padding: 12px;
+    margin: 16px auto;
+    text-decoration: none;
+    color: #18D26F;
+    border-radius: 12px;
+}
+
+.image-container:hover .overlay {
+    height: 100%; /* Hace que el overlay cubra toda la imagen al hacer hover */
+}
+
+.overlay a:hover{
+    background-color: #18D26F;
+    color: #485550;
+    transition: .4s ease;
+}
+
+.lenguajes {
+    align-content: center;
+}
+
+.lenguajes img {
+    height: 50%;
+    width: 15%;
+    object-fit: scale-down;
+}
+
+
+@media (max-width: 500px){
+    .image-container{
+        margin-block: 20px;
+        height: 190px;
+    }
+
+    .image-container h2 {
+        font-size: 15px;
+    }
+
+    .overlay p {
+        font-size: 12px;
+        padding-block: 5px;
+    }
+    .overlay a {
+        font-size: 8px;
+        padding: 8px;
+        margin: 0px auto
+    }
+
+    .lenguajes img {
+        height: 40%;
+    }
+}
+
+
+@media (min-width: 450px) and (max-width: 800px){
+    .image-container{
+        height: 200px;
+    }
+
+    .image-container h2 {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+    .image-container{
+        height: 290px;
+    }
+}
