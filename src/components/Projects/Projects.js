@@ -16,7 +16,7 @@ function Projects() {
             </h1>
             <ul className='two-column-list'>
                 <ImageContainer title='Work Plan Managament' project={ClassroomP} description={description1} languages={lenguajes1} link='https://github.com/MauricioMolina12/ClassroomProject'></ImageContainer>
-                <ImageContainer title='Vehicle maintenance' project={VehicleC} description={description2} languages={lenguajes2} link='https://github.com/MauricioMolina12/ClassroomProject'></ImageContainer>                
+                <ImageContainer title='Vehicle maintenance' project={VehicleC} description={description2} languages={lenguajes2} link='https://github.com/Samue2408/VehicleCare'></ImageContainer>                
             </ul>
 
         </section>
