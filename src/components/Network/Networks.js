@@ -8,7 +8,7 @@ function Networks() {
     return (
         <div className='networks'>
         <a target='blank' title='GitHub' href='https://github.com/Samue2408'><img src={github} alt="github"/></a>
-        <a target='blank' title='Linkedln' href='https://github.com/Samue2408'><img src={linke} alt="linkedln"/></a>
+        <a target='blank' title='Linkedln' href='https://www.linkedin.com/in/samuel-maldonado-engineer/'><img src={linke} alt="linkedln"/></a>
         <a target='blank' title='Gmail' href='mailto:samuelmaldonadom@gmail.com'><img src={gmail} alt="gmail"/></a>
     </div>
     );

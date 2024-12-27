@@ -10,6 +10,12 @@
   .networks a img{
     height: 30px;
     margin-block: 24px;
+    filter: drop-shadow( 0 0 5px rgba(24, 210, 111, 0.5))
+  }
+
+  .networks a img:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
   }
   
   @media (max-width: 600px){

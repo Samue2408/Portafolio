@@ -3,6 +3,7 @@ import NavBar from './components/NavBar/navBar.js';
 import Networks from './components/Network/Networks.js'
 import HeroImage from './components/HeroImage/HeroImage.js';
 import Projects from './components/Projects/Projects.js'
+import ScrollToDiscover from './components/ScrollArrow/scrollToDiscover.js';
 import python from './assets/img/python.svg';
 import img_tailwind from './assets/img/tailwind_css.svg';
 import img_mysql from './assets/img/mysql-official.svg';
@@ -35,6 +36,7 @@ function App() {
         <NavBar/>
         <Networks/>
         <HeroImage/>
+        <ScrollToDiscover />
         <Projects/>
         <section id='skills'>
             <h1>

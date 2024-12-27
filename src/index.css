@@ -1,10 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+:root {
+  --background-color: #F2F5ED;
+  --text-color: #24282C;
+  --principal-color: #18D26F
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+      --background-color: #24282C;
+      --text-color: #F2F5ED;
+  }
+}
+
 body {
-  background-color: #24282C;
+  background-color: var(--background-color);
   font-family: 'Orbitron';
   width: 100%;
   height: 100vh;
   padding: 0;
   margin: 0;
-  color: #F2F5ED;
+  color: var(--text-color);
 }

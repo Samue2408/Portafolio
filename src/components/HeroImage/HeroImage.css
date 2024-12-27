@@ -16,7 +16,7 @@
   }
   
   .home_name h2{
-    color: #18D26F;
+    color: #18d26f;
     line-height: 0.9;
   }
   
@@ -42,7 +42,8 @@
   #picture__profile{
     height: 280px;
     border-radius: 100%;
-    border: 3px solid #18D26F;
+    border: 3px solid #18d26f;
+    filter: drop-shadow( 0 0 10px rgba(24, 210, 111, 0.3))
   }
 
   @media (max-width: 500px){

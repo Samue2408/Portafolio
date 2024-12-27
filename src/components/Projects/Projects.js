@@ -3,6 +3,7 @@ import './Projects.css'
 import ImageContainer from './info_project/ImageContainer';
 import ClassroomP from '../../assets/img/classroomProject.png';
 import VehicleC from '../../assets/img/VehicleCare.png';
+import rentago from '../../assets/img/rentago.png';
 
 function Projects() {
     const description1 = 'Aplicación web donde se gestiona el plan de trabajo de los docentes de la Universidad Libre, el cual fue un Proyecto de Aula donde se ocupó el 2do puesto en toda la universidad, seccional Barranquilla'
@@ -16,7 +17,8 @@ function Projects() {
             </h1>
             <ul className='two-column-list'>
                 <ImageContainer title='Work Plan Managament' project={ClassroomP} description={description1} languages={lenguajes1} link='https://github.com/MauricioMolina12/ClassroomProject'></ImageContainer>
-                <ImageContainer title='Vehicle maintenance' project={VehicleC} description={description2} languages={lenguajes2} link='https://github.com/Samue2408/VehicleCare'></ImageContainer>                
+                <ImageContainer title='Vehicle maintenance' project={VehicleC} description={description2} languages={lenguajes2} link='https://github.com/Samue2408/VehicleCare'></ImageContainer>   
+                <ImageContainer title='RENTA GO' project={rentago} description={description2} languages={lenguajes2} link='https://github.com/Samue2408/VehicleCare'></ImageContainer>                                
             </ul>
 
         </section>
