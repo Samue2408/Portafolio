@@ -1,24 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 
 :root {
-  --background-color: #F2F5ED;
-  --text-color: #24282C;
-  --principal-color: #18D26F
+  --background-color: #24282C;
+  --text-color: #F2F5ED;
+  --principal-color: #18D26F;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-      --background-color: #24282C;
-      --text-color: #F2F5ED;
-  }
-}
-
 body {
-  background-color: var(--background-color);
+  position: relative;
+  background-color: #24282C;
   font-family: 'Orbitron';
   width: 100%;
-  height: 100vh;
   padding: 0;
   margin: 0;
   color: var(--text-color);
+  overflow-x: hidden;
+}
+
+body::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(25deg,#18d26f5b, transparent 30% 70%, #18d26f5b );
+  z-index: -1;
+}
+
+@media (max-width: 500px) {
+  body::after {
+    background: linear-gradient(50deg,#18d26f5b, transparent 20% 80%, #18d26f5b );
+  }
 }

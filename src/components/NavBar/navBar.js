@@ -28,7 +28,7 @@ function NavBar() {
       <ul>
         <NavLink href="#home" active={activeLink === '' || activeLink === 'home' ? true: false}>Home</NavLink>
         <NavLink href="#projects" active={activeLink === 'projects'}>Projects</NavLink>
-        <NavLink href="#skills" active={activeLink === 'skills'}>Skills</NavLink>
+        <NavLink href="#about-me" active={activeLink === 'about-me'}>About me</NavLink>
         <NavLink href="#contact" active={activeLink === 'contact'}>Contact me</NavLink>
       </ul>
     </nav>

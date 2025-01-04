@@ -6,19 +6,22 @@ import VehicleC from '../../assets/img/VehicleCare.png';
 import rentago from '../../assets/img/rentago.png';
 
 function Projects() {
-    const description1 = 'Aplicación web donde se gestiona el plan de trabajo de los docentes de la Universidad Libre, el cual fue un Proyecto de Aula donde se ocupó el 2do puesto en toda la universidad, seccional Barranquilla'
-    const description2 = 'Aplicación movil que proporciona sugerencias de mantenimiento preventivo y correctivo para los usuarios, ofreciendo recomendaciones de cuidado'
-    const lenguajes1 = ['Python', 'JavaScript', 'HTML', 'MySQL']
-    const lenguajes2 = ['Python', 'Flutter', 'FireBase']
+    const description1 = 'Aplicación web donde se gestiona el plan de trabajo de los docentes de la Universidad Libre, el cual fue un Proyecto de Aula donde se ocupó el 2do puesto en toda la universidad, seccional Barranquilla';
+    const description2 = 'Aplicación movil que proporciona sugerencias de mantenimiento preventivo y correctivo para los usuarios, ofreciendo recomendaciones de cuidado';
+    const description3 = 'Aplicacion web de renta de vehiculos contando con seguridad al hashear las contraseñas y usando tokens de autenticación';
+    const lenguajes1 = ['Python', 'JavaScript', 'HTML', 'MySQL'];
+    const lenguajes2 = ['Python', 'Flutter', 'FireBase'];
+    const lenguajes3 = ['Angular', 'NodeJS', 'MySQL'];
+
     return(
-        <section id='projects'>
+        <section id='projects' className='info'>
             <h1>
                 PROJECTS
             </h1>
             <ul className='two-column-list'>
                 <ImageContainer title='Work Plan Managament' project={ClassroomP} description={description1} languages={lenguajes1} link='https://github.com/MauricioMolina12/ClassroomProject'></ImageContainer>
                 <ImageContainer title='Vehicle maintenance' project={VehicleC} description={description2} languages={lenguajes2} link='https://github.com/Samue2408/VehicleCare'></ImageContainer>   
-                <ImageContainer title='RENTA GO' project={rentago} description={description2} languages={lenguajes2} link='https://github.com/Samue2408/VehicleCare'></ImageContainer>                                
+                <ImageContainer title='RENTA GO' project={rentago} description={description3} languages={lenguajes3} link='https://github.com/Samue2408/Reserva_Vehiculos' secondLink='https://github.com/MauricioMolina12/Node-JS-Proyect'></ImageContainer>                                
             </ul>
 
         </section>

@@ -6,6 +6,8 @@ import img_HTML from '../../../assets/img/html-5.svg';
 import img_flutter from '../../../assets/img/flutter.svg';
 import img_FireB from '../../../assets/img/firebase-1.svg';
 import img_MySQL from '../../../assets/img/mysql-official.svg';
+import img_angular from '../../../assets/img/angular.svg';
+import img_node from '../../../assets/img/node-js.svg';
 
 const LANGUAGES ={
     'Python': img_Python,
@@ -13,11 +15,13 @@ const LANGUAGES ={
     'HTML': img_HTML,
     'Flutter': img_flutter,
     'FireBase': img_FireB,
-    'MySQL': img_MySQL
+    'MySQL': img_MySQL,
+    'Angular': img_angular,
+    'NodeJS': img_node
 }
 
 
-export default function ImageContainer({title, project, description, languages, link}) {
+export default function ImageContainer({title, project, description, languages, link, secondLink}) {
     return (
         <li className="image-container">
                     <h2>{title}</h2>
@@ -31,9 +35,22 @@ export default function ImageContainer({title, project, description, languages, 
                                 <img title={language} src={LANGUAGES[language]} alt={index}/>
                             ))}                        
                         </div>
-                        <a target='blank' href={link}>
-                            Go to code
-                        </a>
+                        <div className="buttoms">
+                            <a target="_blank"
+                                rel="noopener noreferrer" 
+                                href={link}>
+                                Go to code
+                            </a>
+                            {secondLink && (
+                                <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href={secondLink}
+                                >
+                                    Go to backend
+                                </a>
+                            )}
+                        </div>
                     </div>
                 </li>
     );
