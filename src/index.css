@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   --background-color: #24282C;
   --text-color: #F2F5ED;
   --principal-color: #18D26F;
+  --font-secundary: 'Montserrat';
 }
 body {
   position: relative;

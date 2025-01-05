@@ -6,11 +6,11 @@ import VehicleC from '../../assets/img/VehicleCare.png';
 import rentago from '../../assets/img/rentago.png';
 
 function Projects() {
-    const description1 = 'Aplicación web donde se gestiona el plan de trabajo de los docentes de la Universidad Libre, el cual fue un Proyecto de Aula donde se ocupó el 2do puesto en toda la universidad, seccional Barranquilla';
-    const description2 = 'Aplicación movil que proporciona sugerencias de mantenimiento preventivo y correctivo para los usuarios, ofreciendo recomendaciones de cuidado';
-    const description3 = 'Aplicacion web de renta de vehiculos contando con seguridad al hashear las contraseñas y usando tokens de autenticación';
+    const description1 = 'Web application where the work plan of the teachers of the Universidad Libre is managed, which was a Classroom Project where the 2nd place was occupied in the entire university, Barranquilla section.';
+    const description2 = 'Mobile application that provides preventive and corrective maintenance suggestions for users, offering care recommendations';
+    const description3 = 'Car rental web application with security by hashing passwords and using authentication tokens';
     const lenguajes1 = ['Python', 'JavaScript', 'HTML', 'MySQL'];
-    const lenguajes2 = ['Python', 'Flutter', 'FireBase'];
+    const lenguajes2 = ['Flutter'];
     const lenguajes3 = ['Angular', 'NodeJS', 'MySQL'];
 
     return(

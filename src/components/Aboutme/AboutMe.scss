@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
   
 #about-me {
     display: flex;
@@ -14,6 +14,7 @@
         }
         
         h4 {
+            font-family: 'Montserrat';
             font-size: 1.1vw;
             font-weight: 400;
             text-align: justify;
@@ -57,12 +58,16 @@
             width: min-content;
             align-items: center;
             white-space: nowrap;
-            background-color: var(--principal-color);
-            color: white;
+            background-color: #1bff7f;
+            color: var(--background-color);
+            font-weight: bolder;
+            font-size: 18px;
             text-decoration: none;
-            border-radius: 20px;    
-            padding: 10px 20px;
+            border-radius: 20px;  
+            border: 2px solid #129e53;  
+            padding: 12px 20px;
             margin-top: 20px;
+            animation: pulse 2s infinite;
             p{   
                 margin: 0;
                 margin-left: 5px;
@@ -70,9 +75,15 @@
             
         } 
         .dwl-cv:hover {
-            transform: scale(1.025);
+            transform: scale(1.05);
             transition: all 0.3s linear;
         }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 7px #18D26F; }
+            50% { box-shadow: 0 0 12px #1bff7f; }
+            100% { box-shadow: 0 0 7px #18D26F; }
+          }
     }
 
     .about-grafic {

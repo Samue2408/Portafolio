@@ -5,7 +5,7 @@ import './AboutMe.scss'
 import cv from '../../assets/docs/hojadevida.pdf'
 
 const technologies = ["Power BI", "Excel", "Word", "Power Point", "GIMP"];
-const softskills = ["Trabajo en equipo", "Puntualidad", "Compromiso", "Dinamismo", "Creatividad"];
+const softskills = ["Teamwork", "Punctuality", "Commitment", "Dynamism", "Creativity"];
 
 const FloatingText = ({ text, style }) => {
     return (
