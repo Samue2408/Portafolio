@@ -1,6 +1,8 @@
 import '../NavBar/navBar.css';
 import React, { useState, useEffect } from 'react';
 import NavLink from './NavLink';
+import { IoLanguage } from "react-icons/io5";
+
 
 function NavBar() {
   const [activeLink, setActiveLink] = useState('');
@@ -23,14 +25,46 @@ function NavBar() {
     };
   }, []); 
 
+  // Estado para controlar la visibilidad del menú
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Función para alternar la visibilidad
+  const toggleMenu = (e) => {
+    e.stopPropagation(); // Evitar que el clic se propague
+    setIsOpen((prev) => !prev);
+  };
+
+  // Función para cerrar el menú al hacer clic fuera
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
+  // Añadir el evento para cerrar el menú al hacer clic fuera
+  React.useEffect(() => {
+    document.addEventListener('click', closeMenu);
+    return () => {
+      document.removeEventListener('click', closeMenu);
+    };
+  }, []);
+
   return (
     <nav>
-      <ul>
+      <ul className='sections'>
         <NavLink href="#home" active={activeLink === '' || activeLink === 'home' ? true: false}>Home</NavLink>
         <NavLink href="#projects" active={activeLink === 'projects'}>Projects</NavLink>
-        <NavLink href="#about-me" active={activeLink === 'about-me'}>About me</NavLink>
-        <NavLink href="#contact" active={activeLink === 'contact'}>Contact me</NavLink>
+        <NavLink href="#about-me" active={activeLink === 'about-me'}>About</NavLink>
+        <NavLink href="#contact" active={activeLink === 'contact'}>Contact</NavLink>
       </ul>
+      {/* <div class="dropdown">
+        <button class="dropdown-button" onClick={toggleMenu}>
+          <IoLanguage/>
+          <p>▼</p>
+        </button>
+          <ul className={`dropdown-menu ${isOpen ? 'show' : ''}`}>
+            <li><a href="#option1">Español</a></li>
+            <li><a href="#option2">Ingles</a></li>
+          </ul>        
+      </div> */}
     </nav>
   );
 }
