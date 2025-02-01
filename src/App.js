@@ -6,6 +6,7 @@ import HeroImage from './components/HeroImage/HeroImage.js';
 import Projects from './components/Projects/Projects.js'
 import SkillSlides from './components/skills-slides/skillsSlides.js';
 import AboutMe from './components/Aboutme/AboutMe.js';
+import ContactMe from './components/Contactme/ContactMe.js';
 /* import ScrollToDiscover from './components/ScrollArrow/scrollToDiscover.js'; */
 /* import python from './assets/img/python.svg';
 import img_tailwind from './assets/img/tailwind_css.svg';
@@ -63,8 +64,7 @@ function App() {
 
         <AboutMe></AboutMe>
 
-        <section id='contact'>        
-        </section>
+        <ContactMe></ContactMe>
 
       </div>      
   );

@@ -3,7 +3,8 @@
 #about-me {
     display: flex;
     padding-top: 80px;
-    padding-inline: 125px;
+    margin: auto;
+    width: 80%;
 
     .about-info{
         width: 50%;
@@ -84,6 +85,16 @@
             50% { box-shadow: 0 0 12px #1bff7f; }
             100% { box-shadow: 0 0 7px #18D26F; }
           }
+
+          view-timeline-name: --aboutme;
+          view-timeline-axis: block;
+      
+          animation-timeline: --aboutme;
+          animation-name: show-about;
+      
+          animation-range: entry 20% cover 45%;
+          animation-fill-mode: both;
+          animation-timing-function: ease-in;
     }
 
     .about-grafic {
@@ -118,6 +129,11 @@
                 background: #2b2b2b5b;
             }        
         }
+        view-timeline-name: --aboutme;
+        view-timeline-axis: block;
+      
+        animation-timeline: --aboutme;
+        animation-name: show-about;
                
     }   
     
@@ -140,15 +156,6 @@
         }
     }
 
-    view-timeline-name: --aboutme;
-    view-timeline-axis: block;
-
-    animation-timeline: --aboutme;
-    animation-name: show-about;
-
-    animation-range: entry 20% cover 45%;
-    animation-fill-mode: both;
-    animation-timing-function: ease-in;
 }
 
 @keyframes show-about {
@@ -167,7 +174,6 @@
   
 @media (max-width: 400px) {
     #about-me {
-        padding-inline: 7vw;
         .about-info{
             width: 100%;
             h1{

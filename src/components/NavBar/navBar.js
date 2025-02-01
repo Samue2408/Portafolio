@@ -50,10 +50,10 @@ function NavBar() {
   return (
     <nav>
       <ul className='sections'>
-        <NavLink href="#home" active={activeLink === '' || activeLink === 'home' ? true: false}>Home</NavLink>
-        <NavLink href="#projects" active={activeLink === 'projects'}>Projects</NavLink>
-        <NavLink href="#about-me" active={activeLink === 'about-me'}>About</NavLink>
-        <NavLink href="#contact" active={activeLink === 'contact'}>Contact</NavLink>
+        <NavLink href="home" active={activeLink === '' || activeLink === 'home' ? true: false}>Home</NavLink>
+        <NavLink href="projects" active={activeLink === 'projects'}>Projects</NavLink>
+        <NavLink href="about-me" active={activeLink === 'about-me'}>About</NavLink>
+        <NavLink href="contact" active={activeLink === 'contact'}>Contact</NavLink>
       </ul>
       {/* <div class="dropdown">
         <button class="dropdown-button" onClick={toggleMenu}>

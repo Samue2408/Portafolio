@@ -9,7 +9,7 @@ const SkillSlides = () => {
         <div className='slider'>
             <div className='slide-track'>
                 {itemslist.map((item, index) => (
-                    <SlidesImage url={item.url} name={item.name}></SlidesImage>
+                    <SlidesImage key={index} url={item.url} name={item.name}></SlidesImage>
                 ))}
             </div>
         </div>

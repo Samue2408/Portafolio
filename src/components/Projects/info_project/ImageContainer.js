@@ -32,7 +32,7 @@ export default function ImageContainer({title, project, description, languages, 
                         </p>
                         <div className='lenguajes'>
                             {languages.map((language, index) => (
-                                <img title={language} src={LANGUAGES[language]} alt={index}/>
+                                <img key={index} title={language} src={LANGUAGES[language]} alt={index}/>
                             ))}                        
                         </div>
                         <div className="buttoms">

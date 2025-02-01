@@ -17,11 +17,15 @@ nav .sections {
     padding: 0;
 }
 
-nav .sections li a{
+nav .sections li button{
+    background: none;
+    border: none;
     color: var(--text-color);
+    font-family: 'Orbitron';
     font-size: 20px;
     font-weight: lighter;
     text-decoration: none;
+    cursor: pointer;
 }
 
  nav .sections li:hover {
@@ -29,7 +33,7 @@ nav .sections li a{
     transition: all 0.3s ease;
   }
 
-nav .sections a.active {
+nav .sections button.active {
     color: #18D26F; 
     text-decoration: underline;
 }
@@ -136,7 +140,7 @@ nav .sections a.active {
         padding: 0;
     }
 
-    nav .sections li a{
+    nav .sections li button{
         font-size: 12px;
     }
 
