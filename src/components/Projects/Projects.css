@@ -1,5 +1,8 @@
 #projects {
-    
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer */
+    user-select: none;  
     color: var(--background-color);
     text-align: center;
     padding-top: 100px;

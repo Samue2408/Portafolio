@@ -1,5 +1,6 @@
 import React from "react";
 import './ImageContainer.css'
+import { LuMousePointerClick } from "react-icons/lu";
 import img_Python from '../../../assets/img/python.svg';
 import img_JavaScript from '../../../assets/img/javascript.svg';
 import img_HTML from '../../../assets/img/html-5.svg';
@@ -24,34 +25,36 @@ const LANGUAGES ={
 export default function ImageContainer({title, project, description, languages, link, secondLink}) {
     return (
         <li className="image-container">
-                    <h2>{title}</h2>
-                    <img src={project} alt={title}/>
-                    <div className="overlay">
-                        <p>
-                            {description}
-                        </p>
-                        <div className='lenguajes'>
-                            {languages.map((language, index) => (
-                                <img key={index} title={language} src={LANGUAGES[language]} alt={index}/>
-                            ))}                        
-                        </div>
-                        <div className="buttoms">
-                            <a target="_blank"
-                                rel="noopener noreferrer" 
-                                href={link}>
-                                Go to code
-                            </a>
-                            {secondLink && (
-                                <a
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    href={secondLink}
-                                >
-                                    Go to backend
-                                </a>
-                            )}
-                        </div>
-                    </div>
-                </li>
+            
+                <h2>{title}</h2>
+                <LuMousePointerClick className='icon'/>            
+            <img src={project} alt={title}/>
+            <div className="overlay">
+                <p>
+                    {description}
+                </p>
+                <div className='lenguajes'>
+                    {languages.map((language, index) => (
+                        <img key={index} title={language} src={LANGUAGES[language]} alt={index}/>
+                    ))}                        
+                </div>
+                <div className="buttoms">
+                    <a target="_blank"
+                        rel="noopener noreferrer" 
+                        href={link}>
+                        Go to code
+                    </a>
+                    {secondLink && (
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={secondLink}
+                        >
+                            Go to backend
+                        </a>
+                    )}
+                </div>
+            </div>
+        </li>
     );
 }

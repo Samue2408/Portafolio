@@ -16,6 +16,15 @@
     height: 85%;
 }
 
+.image-container .icon {
+    position: absolute;
+    font-size: 20px;
+    color: #18D26F;
+    margin: 12px;
+    right: 0;
+    bottom: 0;
+}
+
 .image-container h2 {   
     font-size: 20px;
     padding-block: 12px;
@@ -84,6 +93,10 @@
     .image-container{
         margin-block: 20px;
         height: 190px;
+    }
+
+    .image-container .icon {
+        font-size: 15px;
     }
 
     .image-container h2 {
