@@ -9,6 +9,8 @@ import img_FireB from '../../../assets/img/firebase-1.svg';
 import img_MySQL from '../../../assets/img/mysql-official.svg';
 import img_angular from '../../../assets/img/angular.svg';
 import img_node from '../../../assets/img/node-js.svg';
+import img_next from '../../../assets/img/nextjs.svg';
+import img_tailwind from '../../../assets/img/tailwind_css.svg'
 
 const LANGUAGES ={
     'Python': img_Python,
@@ -18,14 +20,15 @@ const LANGUAGES ={
     'FireBase': img_FireB,
     'MySQL': img_MySQL,
     'Angular': img_angular,
-    'NodeJS': img_node
+    'NodeJS': img_node,
+    'NextJS': img_next,
+    'Tailwind': img_tailwind
 }
 
 
 export default function ImageContainer({title, project, description, languages, link, secondLink}) {
     return (
-        <li className="image-container">
-            
+        <li className="image-container">            
                 <h2>{title}</h2>
                 <LuMousePointerClick className='icon'/>            
             <img src={project} alt={title}/>
