@@ -4,6 +4,16 @@
   margin: 0;
 }
 
+#home-skills {
+  padding-block: 20vh;
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
 .languages-container{
   display: flex;
   flex-wrap: wrap;
@@ -27,33 +37,13 @@
   
 }
 
-@media (min-width: 640px) {
 
-  .language_skill{
-    height: 180px;
-    width: 180px;
-    margin: 50px 70px;
+
+
+@media (max-width: 640px) {
+
+  #home-skills {
+    padding-block: 15vh;
   }
-
-}
-
-@media (min-width: 640px) {
-
-  .language_skill{
-    height: 180px;
-    width: 180px;
-  }
-
-  #skills {
-    padding-top: 120px;
-  }
-
-}
-
-
-@media (min-width: 1280px) {
-  .languages-container {
-    width: 1000px;
-    justify-content: space-between;
-  }
+  
 }

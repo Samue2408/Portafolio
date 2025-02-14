@@ -1,0 +1,64 @@
+.loading {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    font-weight: 900;
+    color: var(--principal-color);
+    background-color: var(--background-color);
+    h1 {
+        filter: drop-shadow( 0 0 5px rgba(24, 210, 111, 0.5))
+    }
+
+    .letter1 {
+        opacity: 0;
+        animation-name: up;
+        animation-duration: 1s;
+        animation-delay: .3s;
+        animation-timing-function: ease-out; /* Hace que la animación termine suavemente */
+        animation-fill-mode: forwards;
+        transform-origin: center; /* Mejora la percepción del movimiento */
+    }
+
+    .letter2 {
+        opacity: 0;
+        animation-name: down;
+        animation-duration: 1.2s; /* Un poco más lento para suavizar */
+        animation-timing-function: ease-out; /* Hace que la animación termine suavemente */
+        animation-fill-mode: forwards;
+        transform-origin: center; /* Mejora la percepción del movimiento */
+    }
+}
+
+@keyframes down {
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    70%{ 
+        opacity: 1;       
+        transform: translateY(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes up {
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    70%{
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

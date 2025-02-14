@@ -5,7 +5,7 @@
     user-select: none;  
     color: var(--background-color);
     text-align: center;
-    padding-top: 100px;
+    padding-top: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,17 +15,15 @@
 
 #projects h1{
     color: var(--principal-color);
-    font-size: 35px;
+    font-size: 30px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
 
-    view-timeline-name: --proyects;
-    view-timeline-axis: block;
-
-    animation-timeline: --proyects;
-    animation-name: show-title;
-
-    animation-range: entry 1% cover 50%;
-    animation-fill-mode: both;
-    animation-timing-function: ease-in;
+#projects h1.animate{
+    opacity: 1;
+    transform: translateY(0);
 }
 
 @keyframes show-title {
@@ -66,26 +64,12 @@
 .two-column-list li {
     width: 45%;
     box-sizing: border-box;    
-
-    view-timeline-name: --proyects;
-    view-timeline-axis: block;
-
-    animation-timeline: --proyects;
-    animation-name: show;
-
-    animation-range: entry 1% cover 40%;
-    animation-fill-mode: both;
-    animation-timing-function: linear;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 849px) {
 
     #projects {
-        padding-top: 100px;
-    }
-
-    #projects h1 {
-        font-size: 30px;
+        padding-top: 30px;
     }
 
     .two-column-list li {
@@ -95,22 +79,21 @@
 
 }
 
-@media (min-width: 600px) and (max-width: 800px) {
+@media (min-width: 600px) and (max-width: 849px) {
 
-    #projects {
-        padding-top: 100px;
-    }
-
-    #projects h1 {
-        font-size: 30px;
-        margin: 0;
+    .two-column-list li {
+        max-width: 45vw;
     }
 }
 
-@media (min-width: 800px) and (max-width: 1200px) {
-
-    #projects h1 {
-        font-size: 30px;
-        margin: 0;
+@media (min-width: 850px) and (max-width: 1024px){
+    .two-column-list li {
+        width: 100%;
+        max-width: 50vw;
     }
+
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+
 }

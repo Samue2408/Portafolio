@@ -1,7 +1,7 @@
 import '../NavBar/navBar.css';
 import React, { useState, useEffect } from 'react';
-import NavLink from './NavLink';
-import { IoLanguage } from "react-icons/io5";
+import NavLink from './NavLink';/* 
+import { IoLanguage } from "react-icons/io5"; */
 
 
 function NavBar() {
@@ -25,7 +25,7 @@ function NavBar() {
     };
   }, []); 
 
-  // Estado para controlar la visibilidad del menú
+ /*  // Estado para controlar la visibilidad del menú
   const [isOpen, setIsOpen] = useState(false);
 
   // Función para alternar la visibilidad
@@ -37,20 +37,20 @@ function NavBar() {
   // Función para cerrar el menú al hacer clic fuera
   const closeMenu = () => {
     setIsOpen(false);
-  };
+  }; */
 
-  // Añadir el evento para cerrar el menú al hacer clic fuera
+ /*  // Añadir el evento para cerrar el menú al hacer clic fuera
   React.useEffect(() => {
     document.addEventListener('click', closeMenu);
     return () => {
       document.removeEventListener('click', closeMenu);
     };
-  }, []);
+  }, []); */
 
   return (
     <nav>
       <ul className='sections'>
-        <NavLink href="home" active={activeLink === '' || activeLink === 'home' ? true: false}>Home</NavLink>
+        <NavLink href="home-skills" active={activeLink === '' || activeLink === 'home-skills' ? true: false}>Home</NavLink>
         <NavLink href="projects" active={activeLink === 'projects'}>Projects</NavLink>
         <NavLink href="about-me" active={activeLink === 'about-me'}>About</NavLink>
         <NavLink href="contact" active={activeLink === 'contact'}>Contact</NavLink>

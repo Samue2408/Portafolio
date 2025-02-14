@@ -21,9 +21,9 @@
   
   @media (max-width: 600px){
     .networks {
-      position: relative;
+      position: absolute;
       padding-left: 0;
-      padding-top: 10px;
+      padding-block: 30px;
       height: auto;
       width: 100%;
       flex-direction: row;

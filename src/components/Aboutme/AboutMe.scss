@@ -6,13 +6,18 @@
     -ms-user-select: none;     /* Internet Explorer */
     user-select: none;  
     display: flex;
+    
     padding-top: 80px;
     margin: auto;
     width: 80%;
+
+    height: 100vh;
     
 
     .about-info{
+        margin: auto;
         width: 50%;
+        height: min-content;
         h1{
             margin: 0;
             color: var(--principal-color);
@@ -97,15 +102,17 @@
           animation-timeline: --aboutme;
           animation-name: show-about;
       
-          animation-range: entry 20% cover 45%;
+          animation-range: entry 1% cover 25%;
           animation-fill-mode: both;
           animation-timing-function: ease-in;
     }
 
     .about-grafic {
         width: 50%;
+        height: 50%;
         overflow: hidden;        
-        position: relative;        
+        position: relative; 
+        margin: auto;       
         .icon-skills {
             width: 100%;
             padding-left: 30px;

@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useEffect, useRef } from "react";
 import './Projects.css'
 import ImageContainer from './info_project/ImageContainer';
 import ClassroomP from '../../assets/img/classroomProject.png';
 import VehicleC from '../../assets/img/VehicleCare.png';
 import rentago from '../../assets/img/rentago.png';
 import mym from '../../assets/img/mym-page.png'
+
+
+
 
 function Projects() {
     const description1 = 'Web application where the work plan of the teachers of the Universidad Libre is managed, which was a Classroom Project where the 2nd place was occupied in the entire university, Barranquilla section.';
@@ -16,9 +19,31 @@ function Projects() {
     const lenguajes3 = ['Angular', 'NodeJS', 'MySQL'];
     const lenguajes4 = ['NextJS', 'Tailwind']
 
+    const projectRef = useRef(null);
+    
+        useEffect(() => {
+            const observer = new IntersectionObserver(
+            (entries, observer) => {
+                entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("animate");
+                    observer.unobserve(entry.target); // Dejar de observar después de la primera vez
+                }
+                });
+            },
+            { threshold: 0.5 } // Se activa cuando el 50% del elemento es visible
+            );
+    
+            if (projectRef.current) {
+            observer.observe(projectRef.current);
+            }
+    
+            return () => observer.disconnect(); // Limpieza para evitar errores
+        }, []);
+
     return(
         <section id='projects' className='info'>
-            <h1>
+            <h1 ref={projectRef}>
                 PROJECTS
             </h1>
             <ul className='two-column-list'>

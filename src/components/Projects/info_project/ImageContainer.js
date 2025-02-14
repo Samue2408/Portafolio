@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import './ImageContainer.css'
 import { LuMousePointerClick } from "react-icons/lu";
 import img_Python from '../../../assets/img/python.svg';
@@ -27,10 +27,33 @@ const LANGUAGES ={
 
 
 export default function ImageContainer({title, project, description, languages, link, secondLink}) {
+
+    const projectRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+                observer.unobserve(entry.target); // Dejar de observar después de la primera vez
+            }
+            });
+        },
+        { threshold: 0.5 } // Se activa cuando el 50% del elemento es visible
+        );
+
+        if (projectRef.current) {
+        observer.observe(projectRef.current);
+        }
+
+        return () => observer.disconnect(); // Limpieza para evitar errores
+    }, []);
+
     return (
-        <li className="image-container">            
-                <h2>{title}</h2>
-                <LuMousePointerClick className='icon'/>            
+        <li ref={projectRef} className="image-container">            
+            <h2>{title}</h2>
+            <LuMousePointerClick className='icon'/>            
             <img src={project} alt={title}/>
             <div className="overlay">
                 <p>
