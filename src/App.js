@@ -8,6 +8,7 @@ import SkillSlides from './components/skills-slides/skillsSlides.js';
 import AboutMe from './components/Aboutme/AboutMe.js';
 import ContactMe from './components/Contactme/ContactMe.js';
 import LoadingScreen from './components/LoadingScreen/LoadingScreen.js';
+import Footer from './components/Footer/Footer.js';
 
 
 function App() {
@@ -35,7 +36,7 @@ function App() {
         <Projects/>
         <AboutMe></AboutMe>
         <ContactMe></ContactMe>
-
+        <Footer/>
       </div>      
   );
 }

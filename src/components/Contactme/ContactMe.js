@@ -1,4 +1,4 @@
-import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import { MdOutlineMailOutline , MdOutlineLocalPhone, MdOutlineLocationOn  } from "react-icons/md";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import "./ContactMe.css";
@@ -41,9 +41,9 @@ export default function ContactMe() {
           Let's create something amazing! 🚀
         </p>
         <div className="contact-details">
-          <p><FaEnvelope className="icon" />samuelmaldonadom@gmail.com</p>
-          <p><FaPhone className="icon" />+57 321 841 36 25</p>
-          <p><FaMapMarkerAlt className="icon" />Barranquilla, Colombia</p>
+          <p><MdOutlineMailOutline className="icon" />samuelmaldonadom@gmail.com</p>
+          <p><MdOutlineLocalPhone className="icon" />+57 321 841 36 25</p>
+          <p><MdOutlineLocationOn className="icon" />Barranquilla, Colombia</p>
         </div>
       </div>
       

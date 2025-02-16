@@ -26,7 +26,7 @@ const LANGUAGES ={
 }
 
 
-export default function ImageContainer({title, project, description, languages, link, secondLink}) {
+export default function ImageContainer({title, project, description, languages, link, secondLink, linkPage}) {
 
     const projectRef = useRef(null);
 
@@ -65,11 +65,16 @@ export default function ImageContainer({title, project, description, languages, 
                     ))}                        
                 </div>
                 <div className="buttoms">
-                    <a target="_blank"
-                        rel="noopener noreferrer" 
-                        href={link}>
-                        Go to code
-                    </a>
+                    
+                    {link && (
+                        <a target="_blank"
+                            rel="noopener noreferrer" 
+                            href={link}>
+                            Go to code
+                        </a>
+                    )}
+
+                    
                     {secondLink && (
                         <a
                             target="_blank"
@@ -77,6 +82,16 @@ export default function ImageContainer({title, project, description, languages, 
                             href={secondLink}
                         >
                             Go to backend
+                        </a>
+                    )}
+
+                    {linkPage && (
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={linkPage}
+                        >
+                            Go to page
                         </a>
                     )}
                 </div>

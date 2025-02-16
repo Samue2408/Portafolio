@@ -50,7 +50,7 @@ function Projects() {
                 <ImageContainer title='Work Plan Managament' project={ClassroomP} description={description1} languages={lenguajes1} link='https://github.com/MauricioMolina12/ClassroomProject'></ImageContainer>
                 <ImageContainer title='Vehicle maintenance' project={VehicleC} description={description2} languages={lenguajes2} link='https://github.com/Samue2408/VehicleCare'></ImageContainer>   
                 <ImageContainer title='RENTA GO' project={rentago} description={description3} languages={lenguajes3} link='https://github.com/Samue2408/Reserva_Vehiculos' secondLink='https://github.com/MauricioMolina12/Node-JS-Proyect'></ImageContainer>     
-                <ImageContainer title='M&M cake shop' project={mym} description={description4} languages={lenguajes4} link='https://mym-page.vercel.app/'/>                           
+                <ImageContainer title='M&M cake shop' project={mym} description={description4} languages={lenguajes4} linkPage='https://mym-page.vercel.app/'/>                           
             </ul>
 
         </section>  

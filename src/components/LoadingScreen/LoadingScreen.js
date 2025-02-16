@@ -9,6 +9,9 @@ export default function LoadingScreen () {
             <h1 className='letter2'>
                 M
             </h1>
+            <p className='text-complement'>
+                Loading...
+            </p>
         </div>
     )
 }

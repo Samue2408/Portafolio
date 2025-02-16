@@ -7,12 +7,11 @@
     user-select: none;  
     display: flex;
     
-    padding-top: 80px;
+    padding-top: 150px;
     margin: auto;
     width: 80%;
-
-    height: 100vh;
     
+    gap: 35px;
 
     .about-info{
         margin: auto;
@@ -109,10 +108,8 @@
 
     .about-grafic {
         width: 50%;
-        height: 50%;
         overflow: hidden;        
         position: relative; 
-        margin: auto;       
         .icon-skills {
             width: 100%;
             padding-left: 30px;
@@ -156,7 +153,7 @@
         right: 0;
         height: 100%;
         width: 100%;
-        background: radial-gradient(ellipse, #18d26f5b, var(--background-color) 50%);
+        background: radial-gradient(ellipse, rgba(44, 62, 80, 0.7), transparent 50%);
     } 
            
     @keyframes float {
@@ -247,6 +244,7 @@
 
             .dwl-cv{
                 font-size: .8rem;
+                margin: 40px auto;
             }
 
         }
