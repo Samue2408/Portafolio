@@ -13,16 +13,15 @@
   padding-block: 200px;
   border-radius: 10px;
 
-  view-timeline-name: --contact-me;
-  view-timeline-axis: block;
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
 
-  animation-timeline: --contact-me;
-  animation-name: fade-in;
+}
 
-  animation-range: entry 1% cover 40%;
-  animation-fill-mode: both;
-  animation-timing-function: linear;
-
+.contact-container.animate {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .contact-info {
@@ -133,17 +132,7 @@
   background: #00b34e;
 }
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateX(-100px);
-}
-to {
-    opacity: 1;
-    transform: translateX(0);
-}
-  
-}
+
 
 @media (max-width: 768px) {
   .contact-container {

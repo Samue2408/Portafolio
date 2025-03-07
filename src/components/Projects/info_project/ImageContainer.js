@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import './ImageContainer.css'
-import { LuMousePointerClick } from "react-icons/lu";
+import { IoInformationCircleOutline } from "react-icons/io5";
 import img_Python from '../../../assets/img/python.svg';
 import img_JavaScript from '../../../assets/img/javascript.svg';
 import img_HTML from '../../../assets/img/html-5.svg';
@@ -53,7 +53,7 @@ export default function ImageContainer({title, project, description, languages, 
     return (
         <li ref={projectRef} className="image-container">            
             <h2>{title}</h2>
-            <LuMousePointerClick className='icon'/>            
+            <IoInformationCircleOutline className='icon'/>            
             <img src={project} alt={title}/>
             <div className="overlay">
                 <p>

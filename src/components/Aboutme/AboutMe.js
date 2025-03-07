@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef, useEffect} from "react";
 import { MdOutlineFileDownload } from "react-icons/md";
 import { LuBrainCircuit } from "react-icons/lu";
 import './AboutMe.scss'
@@ -15,7 +15,29 @@ const FloatingText = ({ text, style }) => {
     );
   };
 
-const AboutMe = () => {
+  export default function AboutMe () {
+
+    const aboutRef = useRef(null);
+    
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+      (entries, observer) => {
+          entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add("animate");
+              observer.unobserve(entry.target); // Dejar de observar después de la primera vez
+          }
+          });
+      },
+      { threshold: 0.6 } // Se activa cuando el 50% del elemento es visible
+      );
+
+      if (aboutRef.current) {
+      observer.observe(aboutRef.current);
+      }
+
+      return () => observer.disconnect(); // Limpieza para evitar errores
+    }, []);
     
     const positions = [
         { top: "10%", right: "10%" },
@@ -24,6 +46,7 @@ const AboutMe = () => {
         { top: "50%", right: "60%" },
         { top: "70%", right: "30%" },
       ];
+      
       const shuffledPositions = positions.sort(() => Math.random() - 0.5);
       const styledPositions = shuffledPositions.map((position) => ({
         ...position,
@@ -31,7 +54,7 @@ const AboutMe = () => {
       }));
 
     return (
-        <section id="about-me" className="about-me">
+        <section ref={aboutRef} id="about-me" className="about-me">
         <div className="about-info">
             <h1>
                 About Me
@@ -74,4 +97,3 @@ const AboutMe = () => {
     )
 }
 
-export default AboutMe;

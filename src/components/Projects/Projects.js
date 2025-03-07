@@ -21,25 +21,25 @@ function Projects() {
 
     const projectRef = useRef(null);
     
-        useEffect(() => {
-            const observer = new IntersectionObserver(
-            (entries, observer) => {
-                entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("animate");
-                    observer.unobserve(entry.target); // Dejar de observar después de la primera vez
-                }
-                });
-            },
-            { threshold: 0.5 } // Se activa cuando el 50% del elemento es visible
-            );
-    
-            if (projectRef.current) {
-            observer.observe(projectRef.current);
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+                observer.unobserve(entry.target); // Dejar de observar después de la primera vez
             }
-    
-            return () => observer.disconnect(); // Limpieza para evitar errores
-        }, []);
+            });
+        },
+        { threshold: 0.5 } // Se activa cuando el 50% del elemento es visible
+        );
+
+        if (projectRef.current) {
+        observer.observe(projectRef.current);
+        }
+
+        return () => observer.disconnect(); // Limpieza para evitar errores
+    }, []);
 
     return(
         <section id='projects' className='info'>

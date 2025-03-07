@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
   
-#about-me {
+.about-me {
     -webkit-user-select: none; /* Safari */
     -moz-user-select: none;    /* Firefox */
     -ms-user-select: none;     /* Internet Explorer */
@@ -12,6 +12,12 @@
     width: 80%;
     
     gap: 35px;
+    opacity: 0;
+    transform: translateY(40px);
+    scale: 90%;
+    transition: opacity 1s ease-out, transform 1s ease-out, scale 1s ease-out;
+
+    
 
     .about-info{
         margin: auto;
@@ -95,15 +101,7 @@
             100% { box-shadow: 0 0 7px #18D26F; }
           }
 
-          view-timeline-name: --aboutme;
-          view-timeline-axis: block;
-      
-          animation-timeline: --aboutme;
-          animation-name: show-about;
-      
-          animation-range: entry 1% cover 25%;
-          animation-fill-mode: both;
-          animation-timing-function: ease-in;
+          
     }
 
     .about-grafic {
@@ -138,11 +136,7 @@
                 background: #2b2b2b5b;
             }        
         }
-        view-timeline-name: --aboutme;
-        view-timeline-axis: block;
-      
-        animation-timeline: --aboutme;
-        animation-name: show-about;
+        
                
     }   
     
@@ -167,17 +161,11 @@
 
 }
 
-@keyframes show-about {
-    0% {
-        opacity: 0;
-        transform: translateY(90px);
-        scale: 80%;
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
-        scale: 100%;
-    }
+.about-me.animate {
+    opacity: 1;
+    transform: translateY(0px);
+    scale: 100%;
+    
 }
 
   

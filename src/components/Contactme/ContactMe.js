@@ -1,6 +1,6 @@
 import { MdOutlineMailOutline , MdOutlineLocalPhone, MdOutlineLocationOn  } from "react-icons/md";
 import emailjs from "@emailjs/browser";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import "./ContactMe.css";
 
 export default function ContactMe() {
@@ -29,8 +29,31 @@ export default function ContactMe() {
     });
   };
 
+
+  const contactRef = useRef(null);
+      
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+    (entries, observer) => {
+        entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+            observer.unobserve(entry.target); // Dejar de observar después de la primera vez
+        }
+        });
+    },
+    { threshold: 0.6 } // Se activa cuando el 50% del elemento es visible
+    );
+
+    if (contactRef.current) {
+    observer.observe(contactRef.current);
+    }
+
+    return () => observer.disconnect(); // Limpieza para evitar errores
+  }, []);
+
   return (
-    <section id="contact" className="contact-container">
+    <section id="contact" ref={contactRef} className="contact-container">
       {/* Columna Izquierda - Info de Contacto */}
       <div className="contact-info">
         <h1>Contact me</h1>
