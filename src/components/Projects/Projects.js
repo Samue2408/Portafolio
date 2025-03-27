@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import './Projects.css'
 import ImageContainer from './info_project/ImageContainer';
-import ClassroomP from '../../assets/img/classroomProject.png';
-import VehicleC from '../../assets/img/VehicleCare.png';
-import rentago from '../../assets/img/rentago.png';
-import mym from '../../assets/img/mym-page.png'
+import ClassroomP from '../../assets/img/classroomProject.webp';
+import VehicleC from '../../assets/img/VehicleCare.webp';
+import rentago from '../../assets/img/rentago.webp';
+import mym from '../../assets/img/mym-page.webp'
 
 
 

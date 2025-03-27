@@ -44,10 +44,12 @@
   
   #picture__profile{
     height: 280px;
+    width: 280px;
     border-radius: 100%;
-    border: 3px solid #18d26f;
+    border: 1px solid #18d26f;
     filter: drop-shadow( 0 0 10px rgba(24, 210, 111, 0.3))
   }
+
 
   @keyframes fadeInUp {
     0% {
@@ -87,6 +89,7 @@
 
     #picture__profile{
       height: 200px;
+      width: 200px;
     }
   }
 
@@ -115,6 +118,7 @@
 
   #picture__profile{
     height: 235px;
+    width: 235px;
   }
 }
 
@@ -135,5 +139,6 @@
 
   #picture__profile{
     height: 225px;
+    width: 225px;
   }
 }
